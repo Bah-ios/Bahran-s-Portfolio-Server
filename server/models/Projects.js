@@ -10,10 +10,20 @@ const ProjectSchema = new mongoose.Schema({
   },
   image:{
     type: String,
-  
   },
-  tags:{type: [String]},
-  link:{ type: String }
+  tags:{
+    type: [String], 
+    required: true
+  },
+  link:{ 
+    type: String,
+    required: true
+   },
+
+   gitLink:{
+    type: String,
+    required: false
+  }
 
 },
 {

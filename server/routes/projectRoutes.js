@@ -5,11 +5,12 @@ const Projects = require('../models/Projects');
 
 router.post('/', async (req,res) =>{
   try{
-    const { title, description, tags, link, gitLink} = req.body
+    const { image,title, description, tags, link, gitLink} = req.body
     if(!title || !description){
       return res.status(400).json({success: false, message: "Title and Description are Requiered"})
     }
     const newProject = new Projects({
+      image,
       title,
       description,
       tags: tags ? tags.split(',') : [],

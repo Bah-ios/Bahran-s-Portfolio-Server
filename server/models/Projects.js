@@ -9,7 +9,8 @@ const ProjectSchema = new mongoose.Schema({
     required: true
   },
   image:{
-    type: String,
+    type: String, 
+    required: true
   },
   tags:{
     type: [String], 
@@ -22,7 +23,7 @@ const ProjectSchema = new mongoose.Schema({
 
    gitLink:{
     type: String,
-    required: false
+    required: true
   }
 
 },
